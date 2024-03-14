@@ -1,0 +1,218 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-spacing: 0;
+    text-decoration: none;
+}
+
+/* Root variables */
+:root {
+    --main-padding: 10px;
+}
+
+/* Body styles */
+body {
+    margin: 0;
+    background-color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+/* Grid wrapper */
+.wrapper {
+    margin: 0 auto;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    grid-template-rows: 7fr;
+    grid-template-areas: "login sidebar";
+}
+
+/* Login area styles */
+.login {
+    grid-area: login;
+    background-color: white;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 70px;
+}
+
+/* Title styles */
+.titles {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* Info section styles */
+.info {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Input group styles */
+.group {
+    display: flex;
+    line-height: 30px;
+    align-items: center;
+    position: relative;
+}
+
+/* Input field styles */
+.input {
+    width: 325px;
+    height: 52px;
+    padding-left: 3rem;
+    margin: 0.5rem 0;
+    border: 2px solid transparent;
+    border-radius: 16px;
+    background-color: #f3f1ff;
+    color: #0d0c22;
+    transition: .5s ease;
+}
+
+.input::placeholder {
+    color: #1C1C1C;
+}
+
+.input:focus, input:hover {
+    outline: none;
+    border-color: rgba(129, 140, 248);
+    background-color: #fff;
+    box-shadow: 0 0 0 5px rgb(129 140 248 / 30%);
+}
+
+/* Icon styles */
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: none;
+    width: 24px;
+    height: 24px;
+}
+
+/* Button styles */
+.button {
+    margin: 1.5rem 0;
+    width: 124px;
+    height: 52px;
+    color: white;
+    border-radius: 16px;
+    background: linear-gradient(99.78deg, #9181F4 -5.85%, #5038ED 109.55%);
+    cursor: pointer;
+}
+
+/* Horizontal rule styles */
+hr {
+    border: 1px solid rgba(240, 237, 255, 1);
+    width: 364px;
+}
+
+/* Login with others text styles */
+.others {
+    background-color: white;
+    font-weight: 700;
+    position: relative;
+    bottom: 14px;
+    padding: 0 5px;
+}
+
+/* Social login button styles */
+.social {
+    width: 325px;
+    height: 52px;
+    padding-left: 3rem;
+    margin: 0.5rem 0;
+    border-radius: 16px;
+    background-color: #fff;
+    color: #0d0c22;
+    border: 1px solid rgba(240, 237, 255, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Icon image styles */
+.img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* Sidebar styles */
+.sidebar {
+    grid-area: sidebar;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(https://i.ibb.co/NZTr3Sy/luxa-org-opacity-changed-luxa-org-opacity-changed-d09df55185bc4fee2167b90f10d18288.png), linear-gradient(217.64deg, #9181F4 -5.84%, #5038ED 106.73%);
+}
+
+/* Rectangle container styles */
+.Rectangle {
+    border: 1px solid rgba(255, 255, 255, 0.52);
+    background: rgba(255, 255, 255, 0.21);
+    width: 372px;
+    height: 484px;
+    border-radius: 46px;
+    padding: 40px;
+    display: inline-flex;
+    margin: 0 70px;
+}
+
+/* Small wrapper styles */
+.small-wrapper {
+    display: flex;
+    position: relative;
+    right: 90px;
+}
+
+/* Women image styles */
+.women {
+    width: 385px;
+    height: 550px;
+    margin-left: -100px;
+    margin-top: -26px;
+}
+
+/* Circle image styles */
+.circle {
+    width: 79px;
+    height: 79px;
+    top: 360px;
+    position: relative;
+}
+
+/* Paragraph styles inside Rectangle */
+.Rectangle > p {
+    width: 184px;
+    height: 230px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 1000px) {
+    .wrapper {
+        grid-template-columns: 1.3fr;
+        grid-template-areas: "login";
+        margin-top: 100px;
+    }
+    .sidebar {
+        display: none;
+    }
+    .login {
+        padding: 70px;
+        justify-content: center;
+        margin: 0 0px;
+    }
+}
